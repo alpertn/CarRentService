@@ -23,7 +23,7 @@ namespace CarRentService.Services
 
                 if (ad != null)
                 {
-                    Console.Write("Soyadınızı yazınız. (Gerçek Soyadınızı Giriniz. Eğer Soyadınız özel karakter içeriyorsa lütfen giriniz. Örnek Özbay / Fidan\nSeçim : ");
+                    Console.Write("Soyadınızı yazınız. (Gerçek Soyadınızı Giriniz. Eğer Soyadınız özel karakter içeriyorsa lütfen giriniz. Örnek Demir / Yılmaz\nSeçim : ");
                     string soyad = Console.ReadLine();
 
                     if (soyad != null)
