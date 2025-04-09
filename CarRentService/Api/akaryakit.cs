@@ -10,19 +10,23 @@ namespace CarRentService.Api
 {
     public class akaryakit
     {
-        // Kodu tamamlamadım.
+        
+        // apiyi https://www.opet.com.tr/akaryakit-fiyatlari üzerinden buldum. sayfaya gelip  incele -> network  yerine geldim. preserve log'u actım.
+        // il yerinden izmiri seçtim. isteği gönderdim ve Fetch / XHR secenegini secip gönderdigim requestlere baktım. Payload yerine geldigimdee
+        // "ProvinceCode: 35" diye bir payload gönderdigimi gördüm. sağ tıklayıp "open in new tab" secenegini sectim.
+        // linke tıkladıgımda veriyi JSON formatında aldıgımı fark ettim. 2-3 kaynaktan yararlanarak da json veriden istediklerimi cektim.
         public static void opetyakit()
         {
-            string url = "https://api.opet.com.tr/api/fuelprices/prices?ProvinceCode=35&IncludeAllProducts=true";
+            string url = "https://api.opet.com.tr/api/fuelprices/prices?ProvinceCode=35&IncludeAllProducts=true"; // ProvinceCode il kodunu gösteriyor. 
             using (var client = new HttpClient())
             {
                 try
                 {
-                    HttpResponseMessage response = client.GetAsync(url).Result;
+                    HttpResponseMessage response = client.GetAsync(url).Result; 
 
-                    string newresponse = response.Content.ReadAsStringAsync().Result;
+                    string newresponse = response.Content.ReadAsStringAsync().Result; 
 
-                    JObject responsejson = JObject.Parse(newresponse);
+                    JObject responsejson = JObject.Parse(newresponse); 
 
                     string districtName = "BAYRAKLI";
 
