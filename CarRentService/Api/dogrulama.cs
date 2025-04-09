@@ -8,10 +8,10 @@ namespace CarRentService.Api
     {
         public static string TcDogrulama(string tckimlik, string name, string surname, string dogumyili)
         {
-            string ad = name.ToUpper();
+            string ad = name.ToUpper(); // ToUpper yazmazsam api sonucu hata veriyor.
             string soyad = surname.ToUpper();
 
-            // XML verisini hazırlıyoruz.
+            
             string soapRequest = $@"<?xml version=""1.0"" encoding=""utf-8""?>
     <soap:Envelope xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"" xmlns:soap=""http://schemas.xmlsoap.org/soap/envelope/"">
       <soap:Body>
@@ -29,29 +29,28 @@ namespace CarRentService.Api
 
             try
             {
-                // API'ye senkron istek gönderiyoruz.
-                var request = httpclient.PostAsync("https://tckimlik.nvi.gov.tr/service/kpspublic.asmx", requestcontent).Result;
-                if (request.IsSuccessStatusCode)
+                
+                var request = httpclient.PostAsync("https://tckimlik.nvi.gov.tr/service/kpspublic.asmx", requestcontent).Result; // nvi nufus mudurlugunun apisi. tc ad soyad ve dogumyıl gönderip dogrumu degılmı kontrol edıyoruz
+                if (request.IsSuccessStatusCode) // eger istek basarili olursa calisiyor.
                 {
-                    string response = request.Content.ReadAsStringAsync().Result;
-                    if (response.Contains("<TCKimlikNoDogrulaResult>true</TCKimlikNoDogrulaResult>"))
+                    string response = request.Content.ReadAsStringAsync().Result; // aldıgımız veride eger <TCKimlikNoDogrulaResult>true</TCKimlikNoDogrulaResult> varsa dogru kabul edıyoruz ve return true ile dogru donduruyoz
+                    if (response.Contains("<TCKimlikNoDogrulaResult>true</TCKimlikNoDogrulaResult>")) 
                     {
-                        return "true"; // Başarılı işlem.
+                        return "true"; 
                     }
                     else
                     {
-                        return "false"; // Hata yanıtı.
+                        return "false"; 
                     }
                 }
                 else
                 {
-                    // Eğer HTTP isteği başarısızsa.
                     return "false";
                 }
             }
             catch
             {
-                // Hata yönetimi.
+                
                 return "false";
             }
         }
