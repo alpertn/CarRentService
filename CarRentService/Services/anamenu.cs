@@ -53,7 +53,7 @@ namespace CarRentService.Services
                             }
                             else if (int.TryParse(input, out int intinput))
                             {
-                                if (intinput != 0 && intinput >= 0)
+                                if (intinput != 0 && intinput >= 0) // & ve demektir.
                                 {
                                     RentCar.Rent(carbrandresponse, response1, intinput);
                                     Console.WriteLine("Araba Kiralandı.");
