@@ -67,6 +67,7 @@ namespace CarRentService.MySql
             var AdminInsert = @"INSERT INTO Admin(Username, Password) VALUES
                 ('root' , 'root');";
 
+		// araba modellerini ve markalarını yapay zekaya yazdirdim
             var CarInsert = @"INSERT INTO Cars (Brand, Model, Year, KmPerLiter, TotalKm, DailyPrice, WeeklyPrice, MonthlyPrice) VALUES
             ('Alfa Romeo', 'Giulietta 1.6 JTDM', 2018, 19.0, 80000, 300, 1500, 4500),
             ('Alfa Romeo', '159 2.0 JTS', 2010, 11.2, 160000, 250, 1250, 3750),
