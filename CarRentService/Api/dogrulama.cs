@@ -8,6 +8,9 @@ namespace CarRentService.Api
     {
         public static string TcDogrulama(string tckimlik, string name, string surname, string dogumyili)
         {
+
+            // csharpda nvi api'yi hazır almadım. githubda csharp dilinde nvi api tek bende var. nvi kendi sitesinde gönderecegimiz xml istegini gosterıyor.
+            
             string ad = name.ToUpper(); // ToUpper yazmazsam api sonucu hata veriyor.
             string soyad = surname.ToUpper();
 
@@ -25,7 +28,7 @@ namespace CarRentService.Api
     </soap:Envelope>";
 
             var httpclient = new HttpClient();
-            var requestcontent = new StringContent(soapRequest, Encoding.UTF8, "text/xml");
+            var requestcontent = new StringContent(soapRequest, Encoding.UTF8, "text/xml"); // xml olarak gonderdıgımız ıcın text/xml yazıyoruz.
 
             try
             {
