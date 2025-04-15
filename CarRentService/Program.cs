@@ -10,6 +10,9 @@ using CarRentService.Api;
 using CarRentService.Services;
 using System.Drawing.Printing;
 using CarRentService.Services;
+
+// Kodların buyuk bir kısmını notlar ile acıkladım.  goz gezdırmenızı onerırım.
+
 namespace CarRentService
 {
     class Program 
@@ -64,7 +67,7 @@ namespace CarRentService
                         string id = Sorgu.CustomerIdSorgu(loginmenu.tc, loginmenu.password);
                         Console.WriteLine($"SahibindenElite Rent a Car Uygulamasına Hoş Geldin {loginmenu.response}.\n");
                         int newid = int.Parse(id);
-                        anamenu.menu(newid, loginmenu.response);
+                        anamenu.menu(newid, loginmenu.response); // ana menuye goturuyor.
 
 
                     }
