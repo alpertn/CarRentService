@@ -50,7 +50,7 @@ namespace CarRentService.Services
 
             connect.Open();
 
-            var table = new Table()
+            var table = new Table() //güzel gozukmesı ıcın tabloe ekledım.
                 .AddColumn("[yellow]Id[/]")
                 .AddColumn("[yellow]CustomerId[/]")
                 .AddColumn("[yellow]CarId[/]")
