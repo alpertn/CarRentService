@@ -187,7 +187,7 @@ namespace CarRentService.MySql
             if (reader.Read())
             {
 
-                //Id, CustomerName, CustomerSurname, CustomerPassword, CustomerPhone, CustomerTc, CustomerBirthYear
+                // alıyoruz
 
                 string Id = reader["Id"].ToString();
                 string Customername = reader["CustomerName"].ToString();
