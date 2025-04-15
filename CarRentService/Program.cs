@@ -17,7 +17,7 @@ namespace CarRentService
 
         public static void Main()
         {
-            Console.Title = "SahibindenElite";
+            Console.Title = "Sahibinden";
             DatabaseRun.DataRunner(); // Database başlatıcı. Insert ve Create gibi kodlar bu modülde calısacak. Tüm arabalar eklenecektir.
 
             bool donguanahtari = false;
