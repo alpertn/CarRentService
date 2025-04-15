@@ -12,7 +12,7 @@ using System.Drawing.Printing;
 using CarRentService.Services;
 namespace CarRentService
 {
-    class Program // Programdaki herşeyi çağıran Kısım
+    class Program 
     {
 
         public static void Main()
