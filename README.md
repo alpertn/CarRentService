@@ -28,7 +28,7 @@ CarRentService, araç kiralama süreçlerini yönetmek ve kullanıcı doğrulama
 
 ### Backend
 - **C# (ASP.NET Core)**: Backend geliştirme için.
-- **HttpClient**: TCKN API'sine istek gönderme ve yanıt alma işlemleri.
+- **HttpClient**: NVİ'a istek gönderir.
 - **MySQL**: Veritabanı yönetimi.
 - **Spectre.Console**: Veritabanından gelen verileri güzel göstermek.
 
