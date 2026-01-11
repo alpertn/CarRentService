@@ -1,6 +1,7 @@
 # CarRentService
 
 CarRentService, araç kiralama süreçlerini yönetmek ve kullanıcı doğrulamalarını gerçekleştirmek için geliştirilmiş bir uygulamadır. Proje, kullanıcıların araç kiralama işlemlerini basitleştirirken yöneticiler için de bir admin paneli sunmaktadır. 
+Not : 2024 itibari ile NVI API açık kullanıma kapatılmıştır.
 
 
 ## Özellikler
